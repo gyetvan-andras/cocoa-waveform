@@ -5,8 +5,10 @@ A cocoa audio player component which displays the waveform of the audio file.
 ## How to use it ? ##
 
 Just add a view in IB and set the class to WaveFormView then you can use:
-1. - (void) openAudio:(NSString *)path;
-2. - (void) openAudioURL:(NSURL *)url;
+<ul>
+<li>(void) openAudio:(NSString *)path;</li>
+<li>(void) openAudioURL:(NSURL *)url;</li>
+</ul>
 
 ## How to had it ? ##
 
