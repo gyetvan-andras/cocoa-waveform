@@ -93,7 +93,25 @@
 		[self status:ERROR message:@"Cannot open audio file"];
 		return;
 	}
+	
+	AudioFileID afid;
+	AudioFileOpenURL(inpUrl, kAudioFileReadPermission, 0, &afid);
+	UInt32 size = 0;
+	UInt32 writable;
+	OSStatus error = AudioFileGetPropertyInfo(afid, kAudioFilePropertyInfoDictionary, &size, &writable);
+	if ( error == noErr ) {
+		CFDictionaryRef info = NULL;
+		error = AudioFileGetProperty(afid, kAudioFilePropertyInfoDictionary, &size, &info);
+		if ( error == noErr ) {
+			NSLog(@"file properties: %@", (NSDictionary *)info);
+		}
+	} else {
+		NSLog(@"Error reading tags");
+	}
+	AudioFileClose(afid);
+	
 	AudioStreamBasicDescription fileFormat;
+	
     UInt32 propSize = sizeof(fileFormat);
     memset(&fileFormat, 0, sizeof(AudioStreamBasicDescription));
 	
