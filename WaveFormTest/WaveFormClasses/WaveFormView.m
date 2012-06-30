@@ -104,7 +104,11 @@
 - (void) setInfoString:(NSString *)newInfo
 {
 	[infoString release];
-	infoString = [newInfo retain];
+	if(wsp.title != nil) {
+		infoString = [[NSString stringWithFormat:@"%@ (%@)",newInfo,wsp.title] retain];
+	} else {
+		infoString = [newInfo copy];
+	}
 	[self setNeedsDisplay:YES];
 }
 

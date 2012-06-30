@@ -113,9 +113,14 @@
 			NSLog(@"file properties: %@", (NSDictionary *)info);
 			NSDictionary *dict = (NSDictionary *)info;
 			NSString *idTitle = [dict valueForKey:@"title"];
-			if(idTitle != nil) {
+			NSString *idArtist = [dict valueForKey:@"artist"];
+			if(idTitle != nil && idArtist != nil) {
+				[title release];
+				title = [[NSString stringWithFormat:@"%@ - %@",idArtist, idTitle]retain];
+			} else if(idTitle != nil) {
 				[title release];
 				title = [idTitle copy];
+				
 			}
 		}
 	} else {
