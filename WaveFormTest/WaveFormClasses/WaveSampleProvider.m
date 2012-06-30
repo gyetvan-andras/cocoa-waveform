@@ -20,6 +20,11 @@
 @implementation WaveSampleProvider
 @synthesize status, statusMessage, binSize, minute, sec, delegate,audioURL;
 
+- (NSString *)title
+{
+	return title;	
+}
+
 - (void) status:(WaveSampleStatus)theStatus message:(NSString *)desc;
 {
 	status = theStatus;
@@ -37,7 +42,7 @@
 		binSize = 50;
 		path = [[NSString stringWithString:thePath] retain];
 		audioURL = [[NSURL fileURLWithPath:path]retain];
-		
+		title = [[path lastPathComponent] copy];
 	}
 	return self;
 }
@@ -50,7 +55,9 @@
 	[sampleData release];
 	[normalizedData release];
 	[delegate release];
+	[title release];
 	[super dealloc];
+	
 }
 
 - (void) createSampleData
@@ -104,6 +111,12 @@
 		error = AudioFileGetProperty(afid, kAudioFilePropertyInfoDictionary, &size, &info);
 		if ( error == noErr ) {
 			NSLog(@"file properties: %@", (NSDictionary *)info);
+			NSDictionary *dict = (NSDictionary *)info;
+			NSString *idTitle = [dict valueForKey:@"title"];
+			if(idTitle != nil) {
+				[title release];
+				title = [idTitle copy];
+			}
 		}
 	} else {
 		NSLog(@"Error reading tags");

@@ -33,6 +33,7 @@ typedef enum {
 	int sec;
 	NSURL *audioURL;
 	id<WaveSampleProviderDelegate>delegate;
+	NSString *title;
 }
 
 @property (readonly, nonatomic) WaveSampleStatus status;
@@ -42,6 +43,7 @@ typedef enum {
 @property (assign, nonatomic) int minute;
 @property (assign, nonatomic) int sec;
 @property (retain) id<WaveSampleProviderDelegate>delegate;
+@property (readonly) NSString *title;
 
 - (id) initWithPath:(NSString *)thePath;
 - (void) createSampleData;
