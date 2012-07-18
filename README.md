@@ -4,14 +4,20 @@ A cocoa audio player component which displays the waveform of the audio file.
 
 ## How to use it ? ##
 
-Just add a view in IB and set the class to WaveFormView then you can use:
+### OSX
+Add a view in IB and set the class to WaveFormViewOSX
+### iOS
+Add a view in IB and set the class to WaveFormViewIOS
+
+Then you can use:
 <ul>
-<li>(void) openAudio:(NSString *)path;</li>
 <li>(void) openAudioURL:(NSURL *)url;</li>
 </ul>
 
+Note on iOS: on iOS you should provide a direct URL to the audio data, you cannot use URL obtained from MPMediaItemPropertyAssetURL. You should extract the content from AVAsset. More on this you can read http://www.subfurther.com/blog/2010/12/13/from-ipod-library-to-pcm-samples-in-far-fewer-steps-than-were-previously-necessary/
+
 ## How to hack it ? ##
 
-If you would like to change visual appereance you should take a look at WaveFormView:drawRect and hack as you wish.
+If you would like to change visual appearance you should take a look at WaveFormView???:drawRect and hack as you wish.
 
  
