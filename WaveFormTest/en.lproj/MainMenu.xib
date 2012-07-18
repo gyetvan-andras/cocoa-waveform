@@ -1303,7 +1303,7 @@
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
 				<object class="NSView" key="NSWindowView" id="439893737">
-					<reference key="NSNextResponder"/>
+					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<array class="NSMutableArray" key="NSSubviews">
 						<object class="NSCustomView" id="84274224">
@@ -1313,14 +1313,13 @@
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSNextKeyView" ref="1014650027"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
-							<string key="NSClassName">WaveFormView</string>
+							<string key="NSClassName">WaveFormViewOSX</string>
 						</object>
 						<object class="NSButton" id="1014650027">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{14, 27}, {112, 32}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
-							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="623413485">
@@ -1344,7 +1343,6 @@
 						</object>
 					</array>
 					<string key="NSFrameSize">{591, 181}</string>
-					<reference key="NSSuperview"/>
 					<reference key="NSNextKeyView" ref="84274224"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {2560, 1578}}</string>

@@ -33,23 +33,37 @@
 	[self performSelectorOnMainThread:@selector(informDelegateOfStatusChange) withObject:nil waitUntilDone:NO];
 }
 
-- (id) initWithPath:(NSString *)thePath
+//- (id) initWithPath:(NSString *)thePath
+//{
+//	self = [super init];
+//	if(self) {
+//		extAFNumChannels = 2;
+//		[self status:LOADING message:@"Processing"];
+//		binSize = 50;
+//		path = [[NSString stringWithString:thePath] retain];
+//		audioURL = [[NSURL fileURLWithPath:path]retain];
+//		title = [[path lastPathComponent] copy];
+//	}
+//	return self;
+//}
+
+- (id) initWithURL:(NSURL *)theURL
 {
 	self = [super init];
 	if(self) {
 		extAFNumChannels = 2;
 		[self status:LOADING message:@"Processing"];
 		binSize = 50;
-		path = [[NSString stringWithString:thePath] retain];
-		audioURL = [[NSURL fileURLWithPath:path]retain];
-		title = [[path lastPathComponent] copy];
+//		path = [[NSString stringWithString:thePath] retain];
+		audioURL = [theURL retain];//[[NSURL fileURLWithPath:path]retain];
+		title = [[theURL lastPathComponent] copy];// @"";//[[path lastPathComponent] copy];
 	}
 	return self;
 }
 
 - (void) dealloc
 {
-	[path release];
+//	[path release];
 	[audioURL release];
 	[statusMessage release];
 	[sampleData release];
@@ -148,7 +162,7 @@
     memset(&clientFormat, 0, sizeof(AudioStreamBasicDescription));
     clientFormat.mFormatID           = kAudioFormatLinearPCM;
     clientFormat.mSampleRate         = sampleRate;
-    clientFormat.mFormatFlags        = kAudioFormatFlagsCanonical;//kAudioFormatFlagIsFloat | kAudioFormatFlagIsAlignedHigh | kAudioFormatFlagsCanonical;// | kAudioFormatFlagIsPacked | kAudioFormatFlagsNativeEndian;// |  kAudioFormatFlagIsNonInterleaved;
+    clientFormat.mFormatFlags        = kAudioFormatFlagIsFloat;//kAudioFormatFlagsCanonical;//kAudioFormatFlagIsFloat | kAudioFormatFlagIsAlignedHigh | kAudioFormatFlagsCanonical;// | kAudioFormatFlagIsPacked | kAudioFormatFlagsNativeEndian;// |  kAudioFormatFlagIsNonInterleaved;
     clientFormat.mChannelsPerFrame   = extAFNumChannels;
     clientFormat.mBitsPerChannel     = sizeof(float) * 8;
     clientFormat.mFramesPerPacket    = 1;
@@ -295,16 +309,6 @@
 		return loadedPackets;
 	}
 }	
-
-- (void) dumpNormalizedData
-{
-	NSLog(@"Sample count :%ld",normalizedData.count);
-	for(NSNumber *nsd in normalizedData) {
-		float val = nsd.floatValue;
-//		val = (val * 50);
-		NSLog(@"Normalized data %f",val);
-	}
-}
 
 - (float *)dataForResolution:(int)pixelWide lenght:(int *)length
 {

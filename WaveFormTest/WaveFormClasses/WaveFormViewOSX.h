@@ -11,7 +11,7 @@
 #import "WaveSampleProvider.h"
 #import "WaveSampleProviderDelegate.h"
 
-@interface WaveFormView : NSView<WaveSampleProviderDelegate>
+@interface WaveFormViewOSX : NSView<WaveSampleProviderDelegate>
 {
 	NSProgressIndicator *progress;
 	CGPoint* sampleData;
@@ -29,7 +29,7 @@
 	NSColor *marker;
 }
 
-- (void) openAudio:(NSString *)path;
+//- (void) openAudio:(NSString *)path;
 - (void) openAudioURL:(NSURL *)url;
 
 @end

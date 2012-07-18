@@ -16,8 +16,23 @@
 		B3322994159C47A500E6C68F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3322993159C47A500E6C68F /* CoreMedia.framework */; };
 		B3322996159C47AF00E6C68F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3322995159C47AF00E6C68F /* AVFoundation.framework */; };
 		B3322998159C47B900E6C68F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3322997159C47B900E6C68F /* AudioToolbox.framework */; };
-		B33229A0159C47E600E6C68F /* WaveFormView.m in Sources */ = {isa = PBXBuildFile; fileRef = B332299C159C47E600E6C68F /* WaveFormView.m */; };
+		B33229A0159C47E600E6C68F /* WaveFormViewOSX.m in Sources */ = {isa = PBXBuildFile; fileRef = B332299C159C47E600E6C68F /* WaveFormViewOSX.m */; };
 		B33229A1159C47E600E6C68F /* WaveSampleProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B332299E159C47E600E6C68F /* WaveSampleProvider.m */; };
+		B3555DF415AEDE42004C1D52 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3555DF315AEDE42004C1D52 /* MediaPlayer.framework */; };
+		B3C371F015ADA6BF008093D0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3C371EE15ADA6BF008093D0 /* InfoPlist.strings */; };
+		B3C371F215ADA6BF008093D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C371F115ADA6BF008093D0 /* main.m */; };
+		B3C371F615ADA6C0008093D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C371F515ADA6C0008093D0 /* AppDelegate.m */; };
+		B3C371F915ADA6C0008093D0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C371F815ADA6C0008093D0 /* ViewController.m */; };
+		B3C371FC15ADA6C0008093D0 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3C371FA15ADA6C0008093D0 /* ViewController_iPhone.xib */; };
+		B3C371FF15ADA6C0008093D0 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3C371FD15ADA6C0008093D0 /* ViewController_iPad.xib */; };
+		B3C3720615ADA7E1008093D0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C3720515ADA7E1008093D0 /* AudioToolbox.framework */; };
+		B3C3720815ADA802008093D0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C3720715ADA802008093D0 /* AVFoundation.framework */; };
+		B3C3720A15ADA815008093D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C3720915ADA815008093D0 /* UIKit.framework */; };
+		B3C3720C15ADA820008093D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C3720B15ADA820008093D0 /* Foundation.framework */; };
+		B3C3720E15ADA82A008093D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C3720D15ADA82A008093D0 /* CoreGraphics.framework */; };
+		B3C3720F15ADA84B008093D0 /* WaveSampleProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B332299E159C47E600E6C68F /* WaveSampleProvider.m */; };
+		B3C3721315ADA9B9008093D0 /* WaveFormViewIOS.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C3721215ADA9B9008093D0 /* WaveFormViewIOS.m */; };
+		B3C3721915ADCCF6008093D0 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C3721815ADCCF6008093D0 /* CoreMedia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,11 +52,31 @@
 		B3322993159C47A500E6C68F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		B3322995159C47AF00E6C68F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B3322997159C47B900E6C68F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		B332299B159C47E600E6C68F /* WaveFormView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveFormView.h; sourceTree = "<group>"; };
-		B332299C159C47E600E6C68F /* WaveFormView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveFormView.m; sourceTree = "<group>"; };
-		B332299D159C47E600E6C68F /* WaveSampleProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveSampleProvider.h; sourceTree = "<group>"; };
-		B332299E159C47E600E6C68F /* WaveSampleProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveSampleProvider.m; sourceTree = "<group>"; };
-		B332299F159C47E600E6C68F /* WaveSampleProviderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveSampleProviderDelegate.h; sourceTree = "<group>"; };
+		B332299B159C47E600E6C68F /* WaveFormViewOSX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveFormViewOSX.h; sourceTree = "<group>"; };
+		B332299C159C47E600E6C68F /* WaveFormViewOSX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveFormViewOSX.m; sourceTree = "<group>"; };
+		B332299D159C47E600E6C68F /* WaveSampleProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WaveSampleProvider.h; path = WaveFormTest/WaveFormClasses/WaveSampleProvider.h; sourceTree = "<group>"; };
+		B332299E159C47E600E6C68F /* WaveSampleProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WaveSampleProvider.m; path = WaveFormTest/WaveFormClasses/WaveSampleProvider.m; sourceTree = "<group>"; };
+		B332299F159C47E600E6C68F /* WaveSampleProviderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WaveSampleProviderDelegate.h; path = WaveFormTest/WaveFormClasses/WaveSampleProviderDelegate.h; sourceTree = "<group>"; };
+		B3555DF315AEDE42004C1D52 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
+		B3C371E315ADA6BF008093D0 /* WaveFormTestIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaveFormTestIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3C371ED15ADA6BF008093D0 /* WaveFormTestIOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WaveFormTestIOS-Info.plist"; sourceTree = "<group>"; };
+		B3C371EF15ADA6BF008093D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B3C371F115ADA6BF008093D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B3C371F315ADA6BF008093D0 /* WaveFormTestIOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WaveFormTestIOS-Prefix.pch"; sourceTree = "<group>"; };
+		B3C371F415ADA6C0008093D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B3C371F515ADA6C0008093D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B3C371F715ADA6C0008093D0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B3C371F815ADA6C0008093D0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B3C371FB15ADA6C0008093D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		B3C371FE15ADA6C0008093D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		B3C3720515ADA7E1008093D0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		B3C3720715ADA802008093D0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		B3C3720915ADA815008093D0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		B3C3720B15ADA820008093D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		B3C3720D15ADA82A008093D0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		B3C3721115ADA9B9008093D0 /* WaveFormViewIOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WaveFormViewIOS.h; path = WaveFormClasses/WaveFormViewIOS.h; sourceTree = "<group>"; };
+		B3C3721215ADA9B9008093D0 /* WaveFormViewIOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WaveFormViewIOS.m; path = WaveFormClasses/WaveFormViewIOS.m; sourceTree = "<group>"; };
+		B3C3721815ADCCF6008093D0 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +91,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B3C371E015ADA6BF008093D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3555DF415AEDE42004C1D52 /* MediaPlayer.framework in Frameworks */,
+				B3C3721915ADCCF6008093D0 /* CoreMedia.framework in Frameworks */,
+				B3C3720E15ADA82A008093D0 /* CoreGraphics.framework in Frameworks */,
+				B3C3720C15ADA820008093D0 /* Foundation.framework in Frameworks */,
+				B3C3720A15ADA815008093D0 /* UIKit.framework in Frameworks */,
+				B3C3720815ADA802008093D0 /* AVFoundation.framework in Frameworks */,
+				B3C3720615ADA7E1008093D0 /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		B3322962159C470D00E6C68F = {
 			isa = PBXGroup;
 			children = (
-				B3322977159C470D00E6C68F /* WaveFormTest */,
+				B3C3720415ADA791008093D0 /* WaveFormCommon */,
+				B3322977159C470D00E6C68F /* WaveFormTestOSX */,
+				B3C371EB15ADA6BF008093D0 /* WaveFormTestIOS */,
 				B3322970159C470D00E6C68F /* Frameworks */,
 				B332296E159C470D00E6C68F /* Products */,
 			);
@@ -72,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				B332296D159C470D00E6C68F /* WaveFormTest.app */,
+				B3C371E315ADA6BF008093D0 /* WaveFormTestIOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +131,7 @@
 		B3322970159C470D00E6C68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B3C3720315ADA765008093D0 /* IOSFrameworks */,
 				B3322997159C47B900E6C68F /* AudioToolbox.framework */,
 				B3322995159C47AF00E6C68F /* AVFoundation.framework */,
 				B3322993159C47A500E6C68F /* CoreMedia.framework */,
@@ -98,7 +151,7 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		B3322977159C470D00E6C68F /* WaveFormTest */ = {
+		B3322977159C470D00E6C68F /* WaveFormTestOSX */ = {
 			isa = PBXGroup;
 			children = (
 				B332299A159C47E600E6C68F /* WaveFormClasses */,
@@ -107,6 +160,7 @@
 				B3322986159C470E00E6C68F /* MainMenu.xib */,
 				B3322978159C470D00E6C68F /* Supporting Files */,
 			);
+			name = WaveFormTestOSX;
 			path = WaveFormTest;
 			sourceTree = "<group>";
 		};
@@ -125,13 +179,77 @@
 		B332299A159C47E600E6C68F /* WaveFormClasses */ = {
 			isa = PBXGroup;
 			children = (
-				B332299B159C47E600E6C68F /* WaveFormView.h */,
-				B332299C159C47E600E6C68F /* WaveFormView.m */,
+				B332299B159C47E600E6C68F /* WaveFormViewOSX.h */,
+				B332299C159C47E600E6C68F /* WaveFormViewOSX.m */,
+			);
+			path = WaveFormClasses;
+			sourceTree = "<group>";
+		};
+		B3555DFA15AEEDE4004C1D52 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		B3C371EB15ADA6BF008093D0 /* WaveFormTestIOS */ = {
+			isa = PBXGroup;
+			children = (
+				B3555DFA15AEEDE4004C1D52 /* Assets */,
+				B3C3721015ADA905008093D0 /* WaveFormClasses */,
+				B3C371F415ADA6C0008093D0 /* AppDelegate.h */,
+				B3C371F515ADA6C0008093D0 /* AppDelegate.m */,
+				B3C371F715ADA6C0008093D0 /* ViewController.h */,
+				B3C371F815ADA6C0008093D0 /* ViewController.m */,
+				B3C371FA15ADA6C0008093D0 /* ViewController_iPhone.xib */,
+				B3C371FD15ADA6C0008093D0 /* ViewController_iPad.xib */,
+				B3C371EC15ADA6BF008093D0 /* Supporting Files */,
+			);
+			path = WaveFormTestIOS;
+			sourceTree = "<group>";
+		};
+		B3C371EC15ADA6BF008093D0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B3C371ED15ADA6BF008093D0 /* WaveFormTestIOS-Info.plist */,
+				B3C371EE15ADA6BF008093D0 /* InfoPlist.strings */,
+				B3C371F115ADA6BF008093D0 /* main.m */,
+				B3C371F315ADA6BF008093D0 /* WaveFormTestIOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B3C3720315ADA765008093D0 /* IOSFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3555DF315AEDE42004C1D52 /* MediaPlayer.framework */,
+				B3C3721815ADCCF6008093D0 /* CoreMedia.framework */,
+				B3C3720D15ADA82A008093D0 /* CoreGraphics.framework */,
+				B3C3720B15ADA820008093D0 /* Foundation.framework */,
+				B3C3720915ADA815008093D0 /* UIKit.framework */,
+				B3C3720715ADA802008093D0 /* AVFoundation.framework */,
+				B3C3720515ADA7E1008093D0 /* AudioToolbox.framework */,
+			);
+			name = IOSFrameworks;
+			sourceTree = "<group>";
+		};
+		B3C3720415ADA791008093D0 /* WaveFormCommon */ = {
+			isa = PBXGroup;
+			children = (
 				B332299D159C47E600E6C68F /* WaveSampleProvider.h */,
 				B332299E159C47E600E6C68F /* WaveSampleProvider.m */,
 				B332299F159C47E600E6C68F /* WaveSampleProviderDelegate.h */,
 			);
-			path = WaveFormClasses;
+			name = WaveFormCommon;
+			sourceTree = "<group>";
+		};
+		B3C3721015ADA905008093D0 /* WaveFormClasses */ = {
+			isa = PBXGroup;
+			children = (
+				B3C3721115ADA9B9008093D0 /* WaveFormViewIOS.h */,
+				B3C3721215ADA9B9008093D0 /* WaveFormViewIOS.m */,
+			);
+			name = WaveFormClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +270,23 @@
 			name = WaveFormTest;
 			productName = WaveFormTest;
 			productReference = B332296D159C470D00E6C68F /* WaveFormTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B3C371E215ADA6BF008093D0 /* WaveFormTestIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3C3720015ADA6C0008093D0 /* Build configuration list for PBXNativeTarget "WaveFormTestIOS" */;
+			buildPhases = (
+				B3C371DF15ADA6BF008093D0 /* Sources */,
+				B3C371E015ADA6BF008093D0 /* Frameworks */,
+				B3C371E115ADA6BF008093D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WaveFormTestIOS;
+			productName = WaveFormTestIOS;
+			productReference = B3C371E315ADA6BF008093D0 /* WaveFormTestIOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -176,6 +311,7 @@
 			projectRoot = "";
 			targets = (
 				B332296C159C470D00E6C68F /* WaveFormTest */,
+				B3C371E215ADA6BF008093D0 /* WaveFormTestIOS */,
 			);
 		};
 /* End PBXProject section */
@@ -191,6 +327,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B3C371E115ADA6BF008093D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3C371F015ADA6BF008093D0 /* InfoPlist.strings in Resources */,
+				B3C371FC15ADA6C0008093D0 /* ViewController_iPhone.xib in Resources */,
+				B3C371FF15ADA6C0008093D0 /* ViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -200,8 +346,20 @@
 			files = (
 				B332297E159C470D00E6C68F /* main.m in Sources */,
 				B3322985159C470D00E6C68F /* AppDelegate.m in Sources */,
-				B33229A0159C47E600E6C68F /* WaveFormView.m in Sources */,
+				B33229A0159C47E600E6C68F /* WaveFormViewOSX.m in Sources */,
 				B33229A1159C47E600E6C68F /* WaveSampleProvider.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3C371DF15ADA6BF008093D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3C3720F15ADA84B008093D0 /* WaveSampleProvider.m in Sources */,
+				B3C371F215ADA6BF008093D0 /* main.m in Sources */,
+				B3C371F615ADA6C0008093D0 /* AppDelegate.m in Sources */,
+				B3C371F915ADA6C0008093D0 /* ViewController.m in Sources */,
+				B3C3721315ADA9B9008093D0 /* WaveFormViewIOS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +388,30 @@
 				B3322987159C470E00E6C68F /* en */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		B3C371EE15ADA6BF008093D0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3C371EF15ADA6BF008093D0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B3C371FA15ADA6C0008093D0 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3C371FB15ADA6C0008093D0 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		B3C371FD15ADA6C0008093D0 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3C371FE15ADA6C0008093D0 /* en */,
+			);
+			name = ViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -302,6 +484,48 @@
 			};
 			name = Release;
 		};
+		B3C3720115ADA6C0008093D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WaveFormTestIOS/WaveFormTestIOS-Prefix.pch";
+				INFOPLIST_FILE = "WaveFormTestIOS/WaveFormTestIOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B3C3720215ADA6C0008093D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WaveFormTestIOS/WaveFormTestIOS-Prefix.pch";
+				INFOPLIST_FILE = "WaveFormTestIOS/WaveFormTestIOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -321,6 +545,16 @@
 				B332298D159C470E00E6C68F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3C3720015ADA6C0008093D0 /* Build configuration list for PBXNativeTarget "WaveFormTestIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3C3720115ADA6C0008093D0 /* Debug */,
+				B3C3720215ADA6C0008093D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

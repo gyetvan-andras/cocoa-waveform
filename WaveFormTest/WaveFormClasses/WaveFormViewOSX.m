@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 DroidZONE. All rights reserved.
 //
 
-#import "WaveFormView.h"
+#import "WaveFormViewOSX.h"
 
-@interface WaveFormView (Private)
+@interface WaveFormViewOSX (Private)
 - (void) initView;
 - (void) drawRoundRect:(NSRect)bounds fillColor:(NSColor *)fillColor strokeColor:(NSColor *)strokeColor radius:(CGFloat)radius lineWidht:(CGFloat)lineWidth;
 - (NSRect) playRect;
@@ -25,7 +25,7 @@
 - (void) drawPause;
 @end
 
-@implementation WaveFormView
+@implementation WaveFormViewOSX
 
 #pragma mark -
 #pragma mark Chrome
@@ -49,6 +49,7 @@
 
 - (void) initView
 {
+	NSLog(@"Init View");
 	playProgress = 0.0;
 	progress = [[[NSProgressIndicator alloc] initWithFrame:[self progressRect]]autorelease];
 	[progress setBezeled:NO];
@@ -119,12 +120,12 @@
 	[self setNeedsDisplay:YES];
 }
 
-- (void) openAudioURL:(NSURL *)url
-{
-	[self openAudio:url.path];
-}
+//- (void) openAudioURL:(NSURL *)url
+//{
+//	[self openAudio:url.path];
+//}
 
-- (void) openAudio:(NSString *)path
+- (void) openAudioURL:(NSURL *)url
 {
 	if(player != nil) {
 		[player pause];
@@ -135,7 +136,7 @@
 	[self setNeedsDisplay:YES];
 	[progress setHidden:FALSE];
 	[progress startAnimation:self];
-	wsp = [[WaveSampleProvider alloc]initWithPath:path];
+	wsp = [[WaveSampleProvider alloc]initWithURL:url];
 	wsp.delegate = self;
 	[wsp createSampleData];
 }

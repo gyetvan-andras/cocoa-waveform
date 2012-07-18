@@ -7,12 +7,12 @@
 //
 
 #import "ViewController.h"
-
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+@synthesize wfv;
 
 - (void)viewDidLoad
 {
@@ -22,6 +22,7 @@
 
 - (void)viewDidUnload
 {
+	[self setWfv:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -34,5 +35,16 @@
 	    return YES;
 	}
 }
+
+- (void)dealloc {
+	[wfv release];
+	[super dealloc];
+}
+- (IBAction)loadAudio:(id)sender {
+	NSString *path = [[NSBundle mainBundle] pathForResource:@"sample" ofType:@"mp3"];
+	NSURL *songURL = [NSURL fileURLWithPath:path];
+	[wfv openAudioURL:songURL];
+}
+
 
 @end

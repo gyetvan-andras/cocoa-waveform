@@ -22,7 +22,7 @@ typedef enum {
 	Float64 extAFRateRatio;
 	int extAFNumChannels;
 	BOOL extAFReachedEOF;
-	NSString *path;
+	NSString *_path;
 	WaveSampleStatus status;
 	NSString *statusMessage;
 	NSMutableArray *sampleData;
@@ -45,8 +45,8 @@ typedef enum {
 @property (retain) id<WaveSampleProviderDelegate>delegate;
 @property (readonly) NSString *title;
 
-- (id) initWithPath:(NSString *)thePath;
+- (id) initWithURL:(NSURL *)theURL;
+//- (id) initWithPath:(NSString *)thePath;
 - (void) createSampleData;
-- (void) dumpNormalizedData;
 - (float *)dataForResolution:(int)pixelWide lenght:(int *)length;
 @end
