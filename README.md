@@ -15,7 +15,7 @@ Then you can use:
 </ul>
 
 Note on iOS: on iOS you should provide a direct URL to the audio data, you cannot use URL obtained from MPMediaItemPropertyAssetURL. You should extract the content from AVAsset. More on this you can read http://www.subfurther.com/blog/2010/12/13/from-ipod-library-to-pcm-samples-in-far-fewer-steps-than-were-previously-necessary/
-In the sample application you should add an mp3 file to the iOS app, because I removed it to avoid legal concerns.
+In the sample application you should add an mp3 file, named sample.mp3 to the iOS app, because I removed it to avoid legal concerns.
 
 ## How to hack it ? ##
 
