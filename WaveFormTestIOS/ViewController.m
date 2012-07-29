@@ -42,8 +42,18 @@
 }
 - (IBAction)loadAudio:(id)sender {
 	NSString *path = [[NSBundle mainBundle] pathForResource:@"sample" ofType:@"mp3"];
-	NSURL *songURL = [NSURL fileURLWithPath:path];
-	[wfv openAudioURL:songURL];
+	if([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+		NSURL *songURL = [NSURL fileURLWithPath:path];
+		[wfv openAudioURL:songURL];
+	} else {
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"No Audio !"
+								   message: @"You should add a sample.mp3 file to the project before test it."
+								  delegate: self
+						 cancelButtonTitle: @"OK"
+						 otherButtonTitles: nil];
+		[alert show];
+		[alert release]; 
+	}
 }
 
 
