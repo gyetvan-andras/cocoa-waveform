@@ -97,6 +97,7 @@
 	[darkgray release];
 	[white release];
 	[marker release];
+	[wsp release];
 	[super dealloc];
 }
 
@@ -136,6 +137,7 @@
 	[self setNeedsDisplay:YES];
 	[progress setHidden:FALSE];
 	[progress startAnimation:self];
+	[wsp release];
 	wsp = [[WaveSampleProvider alloc]initWithURL:url];
 	wsp.delegate = self;
 	[wsp createSampleData];
