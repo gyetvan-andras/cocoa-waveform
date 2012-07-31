@@ -21,4 +21,5 @@ In the sample application you should add an mp3 file, named sample.mp3 to the iO
 
 If you would like to change visual appearance you should take a look at WaveFormView???:drawRect and hack as you wish.
 
- 
+## And the Oscar goes to …! ## 
+This component is inspired by an article found on http://supermegaultragroovy.com/2009/10/06/drawing-waveforms/
