@@ -57,6 +57,8 @@
 //		path = [[NSString stringWithString:thePath] retain];
 		audioURL = [theURL retain];//[[NSURL fileURLWithPath:path]retain];
 		title = [[theURL lastPathComponent] copy];// @"";//[[path lastPathComponent] copy];
+		sampleData = nil;
+		normalizedData = nil;
 	}
 	return self;
 }
@@ -76,6 +78,8 @@
 
 - (void) createSampleData
 {
+	[sampleData release];
+	[normalizedData release];
 	sampleData = [[NSMutableArray array]retain];
 	[self performSelectorInBackground:@selector(loadSample) withObject:nil];
 }
@@ -134,9 +138,9 @@
 			} else if(idTitle != nil) {
 				[title release];
 				title = [idTitle copy];
-				
 			}
 		}
+		if(info) CFRelease(info);
 	} else {
 		NSLog(@"Error reading tags");
 	}

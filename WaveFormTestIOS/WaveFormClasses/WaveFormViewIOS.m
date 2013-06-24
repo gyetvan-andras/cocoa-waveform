@@ -487,11 +487,13 @@
 		float *sd = [wsp dataForResolution:8000 lenght:&sdl];
 		[self setSampleData:sd length:sdl];
 		[self setInfoString:@"Paused"];
+		playProgress = 0.0;
 		int dmin = wsp.minute;
 		int dsec = wsp.sec;
 		[self setTimeString:[NSString stringWithFormat:@"%02d:%02d/--:--",dmin,dsec]];
 		[self startAudio];
-		
 	}
+	[wsp release];
+	wsp = nil;
 }
 @end
