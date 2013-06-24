@@ -67,6 +67,7 @@
 	darkgray = [[NSColor colorWithSRGBRed:47.0/255.0 green:47.0/255.0 blue:48.0/255.0 alpha:1.0]retain];
 	white = [[NSColor whiteColor]retain];
 	marker = [[NSColor colorWithSRGBRed:242.0/255.0 green:147.0/255.0 blue:0.0/255.0 alpha:1.0]retain];
+	wsp = nil;
 }
 
 - (void)setFrame:(NSRect)frameRect
@@ -82,6 +83,9 @@
 
 - (void) dealloc
 {
+	[[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:AVPlayerItemDidPlayToEndTimeNotification
+                                                  object:nil];
 	if(sampleData != nil) {
 		free(sampleData);
 		sampleData = nil;
@@ -145,17 +149,19 @@
 
 - (void) pauseAudio
 {
-	if(player == nil) {
-		[self startAudio];
-		[player play];
-		[self setInfoString:@"Playing"];
-	} else {
-		if(player.rate == 0.0) {
+	if(wsp) {
+		if(player == nil) {
+			[self startAudio];
 			[player play];
 			[self setInfoString:@"Playing"];
 		} else {
-			[player pause];
-			[self setInfoString:@"Paused"];
+			if(player.rate == 0.0) {
+				[player play];
+				[self setInfoString:@"Playing"];
+			} else {
+				[player pause];
+				[self setInfoString:@"Paused"];
+			}
 		}
 	}
 }
@@ -178,7 +184,17 @@
 			playProgress = currentTime/duration;			
 			[self setNeedsDisplay:YES];
 		}];
-	}	
+		[[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(playerItemDidReachEnd:)
+                                                     name:AVPlayerItemDidPlayToEndTimeNotification
+                                                   object:[player currentItem]];
+	}
+}
+
+- (void)playerItemDidReachEnd:(NSNotification *)notification {
+    AVPlayerItem *p = [notification object];
+    [p seekToTime:kCMTimeZero]; //set to 00:00
+    [player pause];
 }
 
 #pragma mark -
@@ -486,8 +502,6 @@
 		[self setTimeString:[NSString stringWithFormat:@"%02d:%02d/--:--",dmin,dsec]];
 		[self startAudio];
 	}
-	[wsp release];
-	wsp = nil;
 }
 
 @end

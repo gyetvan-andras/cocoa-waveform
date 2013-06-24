@@ -31,5 +31,6 @@
 
 //- (void) openAudio:(NSString *)path;
 - (void) openAudioURL:(NSURL *)url;
+- (void)playerItemDidReachEnd:(NSNotification *)notification;
 
 @end
