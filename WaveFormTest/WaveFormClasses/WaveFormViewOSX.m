@@ -23,6 +23,7 @@
 - (void) drawText:(NSString *)text inRect:(NSRect)rect color:(NSColor *)color;
 - (void) drawPlay;
 - (void) drawPause;
+- (void) releaseSample;
 @end
 
 @implementation WaveFormViewOSX
@@ -81,16 +82,21 @@
 	[progress setFrame:[self progressRect]];
 }
 
-- (void) dealloc
+- (void) releaseSample
 {
-	[[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:AVPlayerItemDidPlayToEndTimeNotification
-                                                  object:nil];
 	if(sampleData != nil) {
 		free(sampleData);
 		sampleData = nil;
 		sampleLength = 0;
 	}
+}
+
+- (void) dealloc
+{
+	[[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:AVPlayerItemDidPlayToEndTimeNotification
+	                                                   object:nil];
+	[self releaseSample];
 	[infoString release];
 	[timeString release];
 	[player pause];
@@ -137,7 +143,7 @@
 		[player release];
 		player = nil;
 	}
-	sampleLength = 0;
+	[self releaseSample];
 	[self setNeedsDisplay:YES];
 	[progress setHidden:FALSE];
 	[progress startAnimation:self];
