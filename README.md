@@ -23,3 +23,6 @@ If you would like to change visual appearance you should take a look at WaveForm
 
 ## And the Oscar goes to … 
 This component is inspired by an article found on http://supermegaultragroovy.com/2009/10/06/drawing-waveforms/
+
+## License ##
+This software is free.

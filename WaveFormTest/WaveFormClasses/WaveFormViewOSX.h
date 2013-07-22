@@ -3,7 +3,7 @@
 //  CoreAudioTest
 //
 //  Created by Gyetván András on 6/25/12.
-//  Copyright (c) 2012 DroidZONE. All rights reserved.
+// This software is free.
 //
 
 #import <Cocoa/Cocoa.h>

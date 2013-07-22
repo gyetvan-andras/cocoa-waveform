@@ -3,7 +3,7 @@
 //  WaveFormTest
 //
 //  Created by Gyetván András on 7/11/12.
-//  Copyright (c) 2012 DroidZONE. All rights reserved.
+// This software is free.
 //
 
 #import <UIKit/UIKit.h>
